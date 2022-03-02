@@ -70,15 +70,16 @@ body {
 .main-content {
   flex: 1; /* the parent is a flex container w/ column so this causes the height to be that of the viewport */
   font-size: 2em;
-  margin-top: 70px;
   color: white;
+  margin: 30px;
+  margin-top: 100px;
 }
 
 .home-content {
   height: 100%; /* this is a child of main-content, so why doesn't this work? */
   font-size: 3rem;
-  background-color: cyan;
-  margin: 20px;
+  background-color: rgba(13, 47, 196, 0.6);
+  
 }
 
 .footer {
