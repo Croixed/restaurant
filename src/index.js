@@ -2,6 +2,8 @@ import './style.css';
 import { homeGen } from './home.js';
 import { homeTwo } from './home.js';
 import { menuGen } from './menu.js';
+import { menuTwo } from './menu.js';
+import { aboutGen } from './about.js';
 
 menuGen();
 
@@ -31,24 +33,46 @@ const header = component('div', '', 'header');
 const restaurant = component('div', 'Vegan Steaks', 'restaurant')
 const home = component('div', 'Home', 'home');
 const menu = component('div', 'Menu', 'menu');
-const aboutUs = component('div', 'About Us', 'about-us');
+const about = component('div', 'About Us', 'about-us');
 // put links in seperate div
 const links = component('div', '', 'links');
-links.append(home, menu, aboutUs);
+links.append(home, menu, about);
 header.append(restaurant, links);
 // generate content from home.js
-const mainContent = homeTwo();
+// let mainContent = homeTwo();
+let mainContent = homeGen();
+// mainContent = menuTwo();
 // generate footer
 const footer = component('div', 'footer', 'footer');
 
 contents.append(header, mainContent, footer);
 
 
-console.log(mainContent.innerHTML);
 
-function testFunc() {
-  mainContent.innerHTML = ''
+function homeFunc() {
+  mainContent = homeGen();
+  contents.innerHTML = '';
+  contents.append(header, mainContent, footer);
   console.log('cleared');
 }
 
-links.onclick = testFunc;
+function menuFunc() {
+  mainContent = menuGen();
+  contents.innerHTML = '';
+  contents.append(header, mainContent, footer);
+  console.log('cleared, w/ menu');
+}
+
+function aboutFunc() {
+  mainContent = aboutGen();
+  contents.innerHTML = '';
+  contents.append(header, mainContent, footer);
+  console.log('cleared about');
+}
+
+home.onclick = homeFunc;
+menu.onclick = menuFunc;
+about.onclick = aboutFunc;
+
+
+mainContent = menuTwo();

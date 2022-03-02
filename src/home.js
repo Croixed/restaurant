@@ -1,9 +1,9 @@
 import Steak from './steak.png';
 
-const mySteak = new Image();
-mySteak.src = Steak;
+/* const mySteak = new Image();
+mySteak.src = Steak; */
 
-export const homeGen = () => {
+export const homeTwo = () => {
   console.log('test home.js');
 }
 
@@ -14,7 +14,9 @@ function component(type, text, className) {
   return element
 }
 
-export const homeTwo = () => {
+export const homeGen = () => {
+  const mySteak = new Image();
+  mySteak.src = Steak;
 
   const mainContent = component('div', '', 'main-content');
   const contentTitle = component('div', 'Welcome to Vegan Steaks', 'content-title')

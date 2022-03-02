@@ -1,5 +1,5 @@
-export const menuTwo = () => {
-  console.log('test menu.js');
+export const aboutTwo = () => {
+  console.log('test about.js');
 }
 
 function component(type, text, className) {
@@ -9,11 +9,11 @@ function component(type, text, className) {
   return element
 }
 
-export const menuGen = () => {
+export const aboutGen = () => {
 
   const mainContent = component('div', '', 'main-content');
-  const contentTitle = component('div', 'Menu', 'content-title')
-  const contentText = component('div', 'try', 'content-text');
+  const contentTitle = component('div', 'About Us', 'content-title')
+  const contentText = component('div', 'Ethically sourced', 'content-text');
 
   const homeContent = component('div', '', 'home-content');
   
