@@ -23,28 +23,20 @@ function component(type, text, className) {
   return element
 }
 
-// generate the basic elements needed for webpage
+// generate the basic elements needed for header
 const header = component('div', '', 'header');
-
 const restaurant = component('div', 'Vegan Steaks', 'restaurant')
-
 const home = component('div', 'Home', 'home');
 const menu = component('div', 'Menu', 'menu');
 const aboutUs = component('div', 'About Us', 'about-us');
-
+// put links in seperate div
 const links = component('div', '', 'links');
 links.append(home, menu, aboutUs);
 links.onclick = homeGen;
 header.append(restaurant, links);
-
+// generate content from home.js
 const mainContent = homeTwo();
-
-
-
+// generate footer
 const footer = component('div', 'footer', 'footer');
 
-
 contents.append(header, mainContent, footer);
-// contents.appendChild(header);
-
-

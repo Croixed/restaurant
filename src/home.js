@@ -5,7 +5,7 @@ mySteak.src = Steak;
 // console.log(mySteak);
 
 export const homeGen = () => {
-  console.log('I get called from print.js');
+  console.log('test home.js');
 }
 
 function component(type, text, className) {
