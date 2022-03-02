@@ -40,7 +40,7 @@ links.append(home, menu, aboutUs);
 header.append(restaurant, links);
 
 //title.onclick = printMe;
-const mainContent = component('div', 'CONTENT content content content content content content', 'main-content');
+const mainContent = component('div', 'Title content content content content content content', 'main-content');
 const footer = component('div', 'footer', 'footer');
 
 
