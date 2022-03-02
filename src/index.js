@@ -1,5 +1,5 @@
 import './style.css';
-import printMe from './print.js';
+import homeGen from './home.js';
 import Steak from './steak.png';
 
 // create main element, append to 'body'
@@ -30,7 +30,7 @@ function component(type, text, className) {
 // generate the basic elements needed for webpage
 const header = component('div', '', 'header');
 
-const restaurant = component('div', 'Diner Name', 'restaurant')
+const restaurant = component('div', 'Vegan Steaks', 'restaurant')
 
 const home = component('div', 'Home', 'home');
 const menu = component('div', 'Menu', 'menu');
@@ -38,16 +38,23 @@ const aboutUs = component('div', 'About Us', 'about-us');
 
 const links = component('div', '', 'links');
 links.append(home, menu, aboutUs);
+links.onclick = homeGen;
 header.append(restaurant, links);
 
 //title.onclick = printMe;
 const mainContent = component('div', '', 'main-content');
 
+
+
+
 // sample main content for the first Home page
-const homeContent = component('div', 'Looccaecat it anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum .Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'home-content');
+const bodyText = 'Welcome to Vegan Steaks'
+const homeContent = component('div', bodyText, 'home-content');
 homeContent.appendChild(lineBreak);
 homeContent.appendChild(mySteak);
 mainContent.appendChild(homeContent);
+
+
 
 
 
