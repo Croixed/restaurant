@@ -79,15 +79,21 @@ body {
   height: 100%; /* this is a child of main-content, so why doesn't this work? */
   font-size: 3rem;
   background-color: rgba(13, 47, 196, 0.6);
+  padding: 20px;
+  padding-bottom: 0px;
+
   
 }
 
 img {
-  width: 95%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 .footer {
   color: cyan;
+  margin-top: 40px;
 
   height: 30px;
   text-align: center;
