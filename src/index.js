@@ -48,10 +48,11 @@ const footer = component('div', 'footer', 'footer');
 contents.append(header, mainContent, footer);
 
 
-
+// these three functions should be one function, to stay DRY
 function homeFunc() {
   mainContent = homeGen();
   contents.innerHTML = '';
+  // this append doesn't feel very good, there's probably a better way to do this
   contents.append(header, mainContent, footer);
   console.log('cleared');
 }
@@ -73,6 +74,3 @@ function aboutFunc() {
 home.onclick = homeFunc;
 menu.onclick = menuFunc;
 about.onclick = aboutFunc;
-
-
-mainContent = menuTwo();
