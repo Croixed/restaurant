@@ -82,6 +82,10 @@ body {
   
 }
 
+img {
+  width: 95%;
+}
+
 .footer {
   color: cyan;
 

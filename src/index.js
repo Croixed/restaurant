@@ -12,9 +12,10 @@ background.classList.add("bg");
 document.body.appendChild(background);
 
 // console.log(contents);
-// const mySteak = new Image();
-// mySteak.src = Steak;
+const mySteak = new Image();
+mySteak.src = Steak;
 // console.log(mySteak);
+const lineBreak = document.createElement('br');
 
 document.body.appendChild(contents);
 
@@ -44,6 +45,8 @@ const mainContent = component('div', '', 'main-content');
 
 // sample main content for the first Home page
 const homeContent = component('div', 'Looccaecat it anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'home-content');
+homeContent.appendChild(lineBreak);
+homeContent.appendChild(mySteak);
 mainContent.appendChild(homeContent);
 
 
