@@ -75,9 +75,10 @@ body {
 }
 
 .home-content {
-  height: 80%; /* this is a child of main-content, so why doesn't this work? */
+  height: 100%; /* this is a child of main-content, so why doesn't this work? */
   font-size: 3rem;
   background-color: cyan;
+  margin: 20px;
 }
 
 .footer {
