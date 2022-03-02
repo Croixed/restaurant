@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
-
 * {
   padding: 0;
   margin: 0;
   font-weight: bold;
   font-family: 'Open Sans';
 }
-
 
 body {
   height: 100vh;
@@ -69,7 +67,6 @@ body {
 
 .main-content {
   flex: 1; /* the parent is a flex container w/ column so this causes the height to be that of the viewport */
-  font-size: 2em;
   color: white;
   margin: 30px;
   margin-top: 100px;
@@ -77,13 +74,19 @@ body {
 
 .home-content {
   height: 100%; /* this is a child of main-content, so why doesn't this work? */
-  font-size: 2.4rem;
+  /* font-size: 2.4rem; */
   background-color: rgba(13, 47, 196, 0.6);
   border-radius: 14px;
   padding: 20px;
   padding-bottom: 0px;
+}
 
-  
+.content-title {
+  font-size: 2.5rem;
+}
+
+.content-text {
+  font-size: 1.4rem;
 }
 
 img {
@@ -101,8 +104,6 @@ img {
   text-align: center;
   background-color: rgb(43, 44, 44);
 }
-
-
 
 
 @media only screen and (max-width: 600px) {

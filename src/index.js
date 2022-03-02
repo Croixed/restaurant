@@ -1,6 +1,9 @@
 import './style.css';
 import { homeGen } from './home.js';
 import { homeTwo } from './home.js';
+import { menuGen } from './menu.js';
+
+menuGen();
 
 // create main element, append to 'body'
 const contents = document.createElement('div');
@@ -32,7 +35,6 @@ const aboutUs = component('div', 'About Us', 'about-us');
 // put links in seperate div
 const links = component('div', '', 'links');
 links.append(home, menu, aboutUs);
-links.onclick = homeGen;
 header.append(restaurant, links);
 // generate content from home.js
 const mainContent = homeTwo();
@@ -40,3 +42,13 @@ const mainContent = homeTwo();
 const footer = component('div', 'footer', 'footer');
 
 contents.append(header, mainContent, footer);
+
+
+console.log(mainContent.innerHTML);
+
+function testFunc() {
+  mainContent.innerHTML = ''
+  console.log('cleared');
+}
+
+links.onclick = testFunc;
