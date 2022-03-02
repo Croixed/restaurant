@@ -1,6 +1,6 @@
 import './style.css';
-import homeGen from './home.js';
-import Steak from './steak.png';
+import { homeGen } from './home.js';
+import { homeTwo } from './home.js';
 
 // create main element, append to 'body'
 const contents = document.createElement('div');
@@ -11,11 +11,7 @@ const background = document.createElement('div');
 background.classList.add("bg");
 document.body.appendChild(background);
 
-// console.log(contents);
-const mySteak = new Image();
-mySteak.src = Steak;
-// console.log(mySteak);
-const lineBreak = document.createElement('br');
+
 
 document.body.appendChild(contents);
 
@@ -41,20 +37,7 @@ links.append(home, menu, aboutUs);
 links.onclick = homeGen;
 header.append(restaurant, links);
 
-//title.onclick = printMe;
-const mainContent = component('div', '', 'main-content');
-
-
-
-
-// sample main content for the first Home page
-const bodyText = 'Welcome to Vegan Steaks'
-const homeContent = component('div', bodyText, 'home-content');
-homeContent.appendChild(lineBreak);
-homeContent.appendChild(mySteak);
-mainContent.appendChild(homeContent);
-
-
+const mainContent = homeTwo();
 
 
 
