@@ -46,7 +46,6 @@ body {
 
   display: flex;
   align-items: end;
-  gap: 20px;
   padding: 0px 16px;
   position: fixed;
 }
@@ -55,8 +54,10 @@ body {
   font-size: 2.2rem;
 }
 
-.home {
+.links {
   margin-left: auto;
+  display: flex;
+  gap: 16px;
 }
 
 .main-content {
@@ -69,4 +70,14 @@ body {
 .footer {
   height: 30px;
   background-color: slategray;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+  }
 }

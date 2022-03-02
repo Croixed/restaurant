@@ -28,14 +28,19 @@ function component(type, text, className) {
 
 // generate the basic elements needed for webpage
 const header = component('div', '', 'header');
-const restaurant = component('div', 'Name', 'restaurant')
+
+const restaurant = component('div', 'Diner Name', 'restaurant')
+
 const home = component('div', 'Home', 'home');
 const menu = component('div', 'Menu', 'menu');
 const aboutUs = component('div', 'About Us', 'about-us');
-header.append(restaurant, home, menu, aboutUs)
+
+const links = component('div', '', 'links');
+links.append(home, menu, aboutUs);
+header.append(restaurant, links);
 
 //title.onclick = printMe;
-const mainContent = component('div', 'CONTENT content content content content', 'main-content');
+const mainContent = component('div', 'CONTENT content content content content content content', 'main-content');
 const footer = component('div', 'footer', 'footer');
 
 
