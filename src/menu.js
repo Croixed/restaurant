@@ -15,7 +15,7 @@ function component(type, text, className) {
 //name ... ... price
 //.. description ..
 // ... image ...
-menuGenerator = (image, price, name, desc) => {
+const menuGenerator = (image, price, name, desc) => {
   const MenuItem = component('div', '', 'menu-item');
 
   const itemName = component('span', name, 'item-name');
@@ -35,31 +35,19 @@ menuGenerator = (image, price, name, desc) => {
 
 // this is really messy and I can definitely refactor it to stay DRY
 export const menuGen = () => {
-  const mySteak = new Image();
-  mySteak.src = Steak;
-  mySteak.classList.add("menu-img");
-  const mySteak2 = mySteak.cloneNode(true);
-  mySteak2.src = SteakTwo;
 
-  const menuOne = document.createElement('div');
-  menuOne.classList.add('menu-item');
-  const menuTwo = menuOne.cloneNode(true);
-  const menuThree = menuOne.cloneNode(true);
-  const menufour = menuOne.cloneNode(true);
+  const menuOne = menuGenerator(Steak, '29.99', 'grass-fed steak', 'description goes here');
+  const menuTwo = menuGenerator(SteakTwo, '49.99', 'hay-fed steak', 'description goes here');
 
-  const menuTextOne = component('div', 'Item 1... ... 189.99', 'menu-text');
-  const menuTextTwo = component('div', 'Item 2... ... 189.99', 'menu-text');
-
-  menuOne.append(menuTextOne, mySteak2);
-  menuTwo.append(menuTextTwo, mySteak);
-
-
-  const mainContent = component('div', '', 'main-content');
-  const contentTitle = component('div', 'Menu ', 'content-title')
+  const mainContent = component('div', '', 'main-content', 'grass-fed steak');
+  const contentTitle = component('div', 'Menu ', 'content-title');
   const contentText = component('div', 'Vegetarian Steaks:', 'content-text');
   const menuContent = component('div', '', 'menu-content');
+
+  const menuWrapper = component ('div', '', 'menu-wrapper');
+  menuWrapper.append(menuOne, menuTwo);
   
-  menuContent.append(contentTitle, contentText, menuOne, menuTwo);
+  menuContent.append(contentTitle, contentText, menuWrapper);
   mainContent.appendChild(menuContent);
   return mainContent
 }
