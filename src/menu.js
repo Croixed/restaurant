@@ -15,10 +15,10 @@ export const menuGen = () => {
   const contentTitle = component('div', 'Menu', 'content-title')
   const contentText = component('div', 'try', 'content-text');
 
-  const homeContent = component('div', '', 'home-content');
+  const menuContent = component('div', '', 'menu-content');
   
-  homeContent.appendChild(contentTitle);
-  homeContent.appendChild(contentText);
-  mainContent.appendChild(homeContent);
+  menuContent.appendChild(contentTitle);
+  menuContent.appendChild(contentText);
+  mainContent.appendChild(menuContent);
   return mainContent
 }

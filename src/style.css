@@ -73,7 +73,9 @@ body {
   margin-top: 100px;
 }
 
-.home-content {
+.home-content,
+.menu-content,
+.about-content {
   height: 100%; /* this is a child of main-content, so why doesn't this work? */
   /* font-size: 2.4rem; */
   background-color: #29252490; /* stone 800 */

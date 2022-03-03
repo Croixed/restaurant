@@ -15,10 +15,10 @@ export const aboutGen = () => {
   const contentTitle = component('div', 'About Us', 'content-title')
   const contentText = component('div', 'Ethically sourced', 'content-text');
 
-  const homeContent = component('div', '', 'home-content');
+  const aboutContent = component('div', '', 'about-content');
   
-  homeContent.appendChild(contentTitle);
-  homeContent.appendChild(contentText);
-  mainContent.appendChild(homeContent);
+  aboutContent.appendChild(contentTitle);
+  aboutContent.appendChild(contentText);
+  mainContent.appendChild(aboutContent);
   return mainContent
 }
