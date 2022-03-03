@@ -39,9 +39,7 @@ const links = component('div', '', 'links');
 links.append(home, menu, about);
 header.append(restaurant, links);
 // generate content from home.js
-// let mainContent = homeTwo();
 let mainContent = homeGen();
-// mainContent = menuTwo();
 // generate footer
 const footer = component('div', 'footer', 'footer');
 

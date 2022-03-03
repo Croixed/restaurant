@@ -43,7 +43,8 @@ body {
   height: 70px;
   left: 0px;
   right: 0px;
-  background-color: rgba(39, 75, 99, 0.7);
+  background-color: #17171790; /* neutral 900 */
+  color: white;
   font-size: 1.4rem;
   backdrop-filter: blur(8px);
 
@@ -52,7 +53,7 @@ body {
   padding: 0px 16px;
   position: fixed;
 
-  border-bottom: 3px solid rgb(29, 55, 73);
+  border-bottom: 4px solid rgb(9, 18, 24);
 }
 
 .restaurant {
@@ -75,10 +76,12 @@ body {
 .home-content {
   height: 100%; /* this is a child of main-content, so why doesn't this work? */
   /* font-size: 2.4rem; */
-  background-color: rgba(13, 47, 196, 0.6);
-  border-radius: 14px;
+  background-color: #29252490; /* stone 800 */
+  border-radius: 10px;
   padding: 20px;
   padding-bottom: 0px;
+
+  border-top: 8px solid rgb(9, 18, 24);
 }
 
 .content-title {
@@ -102,7 +105,7 @@ img {
 
   height: 30px;
   text-align: center;
-  background-color: rgb(43, 44, 44);
+  background-color: #171717c9;
 }
 
 

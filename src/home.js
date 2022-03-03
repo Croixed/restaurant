@@ -27,6 +27,8 @@ export const homeGen = () => {
   homeContent.appendChild(contentTitle);
   homeContent.appendChild(contentText);
   homeContent.appendChild(mySteak);
+  const mySteak2 = mySteak.cloneNode(true);
+  homeContent.appendChild(mySteak2);
   mainContent.appendChild(homeContent);
   return mainContent
 }
