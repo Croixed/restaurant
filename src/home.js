@@ -17,20 +17,16 @@ function component(type, text, className) {
 export const homeGen = () => {
   const mySteak = new Image();
   mySteak.src = Steak;
+  mySteak.classList.add("home-img");
+  const mySteak2 = mySteak.cloneNode(true);
 
   const mainContent = component('div', '', 'main-content');
   const contentTitle = component('div', 'Welcome to Vegan Steaks', 'content-title')
-  const contentText = component('div', 'Home of the only Vegan Steaks! How are our steaks vegan? We taught our cattle to only eat organic, ethically sourced, vegan foods. It took many years of training and genetic modifications using CRISPR to reach this point, and now we are willing to sell you the delicious results!', 'content-text');
-
+  const contentText = component('div', 'Home of the only Vegan Steaks! How are our steaks vegan? We taught our cattle to only eat organic, ethically sourced, vegan foods. It took many years of training and genetic modifications using CRISPR to reach this point, and now we are willing to sell you the results!', 'content-text');
   const homeContent = component('div', '', 'home-content');
   const doorDash = component('button', 'order on DoorDash', 'door-button')
   
-  homeContent.appendChild(contentTitle);
-  homeContent.appendChild(contentText);
-  homeContent.appendChild(doorDash);
-  homeContent.appendChild(mySteak);
-  const mySteak2 = mySteak.cloneNode(true);
-  homeContent.appendChild(mySteak2);
+  homeContent.append(contentTitle, contentText, doorDash, mySteak, mySteak2)
   mainContent.appendChild(homeContent);
   return mainContent
 }

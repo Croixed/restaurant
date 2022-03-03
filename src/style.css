@@ -75,17 +75,16 @@ body {
 }
 
 .main-content {
-  flex: 1; /* the parent is a flex container w/ column so this causes the height to be that of the viewport */
+  flex: 1;
   color: white;
-  margin: 30px;
+  margin: 8%;
   margin-top: 100px;
 }
 
 .home-content,
 .menu-content,
 .about-content {
-  height: 100%; /* this is a child of main-content, so why doesn't this work? */
-  /* font-size: 2.4rem; */
+  height: 100%;
   background-color: #29252490; /* stone 800 */
   border-radius: 10px;
   padding: 20px;
@@ -101,6 +100,8 @@ body {
   font-size: 1rem;
   height: 40px;
   border-radius: 19px;
+  font-weight: 900;
+  margin: 10px;
 }
 
 .content-title {
@@ -112,7 +113,7 @@ body {
   font-size: 1.4rem;
 }
 
-img {
+.home-img {
   width: calc(100% - 80px);
   padding: 0 40px;
   margin: 0px;
@@ -139,7 +140,11 @@ img {
     margin-top: 140px;
   }
 
-  img {
+  .content-text {
+    font-size: 1.2rem;
+  }
+
+  .home-img {
     width: 100%;
     padding: 0;
   }
