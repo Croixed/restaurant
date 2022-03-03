@@ -1,4 +1,5 @@
 import Steak from './steak.png';
+import SteakTwo from './steakTwo.jpg';
 import Dash from './dash.svg';
 
 /* const mySteak = new Image();
@@ -20,6 +21,7 @@ export const homeGen = () => {
   mySteak.src = Steak;
   mySteak.classList.add("home-img");
   const mySteak2 = mySteak.cloneNode(true);
+  mySteak2.src = SteakTwo;
 
   const myDash = new Image();
   myDash.src = Dash;
