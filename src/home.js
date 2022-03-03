@@ -23,9 +23,11 @@ export const homeGen = () => {
   const contentText = component('div', 'Home of the only Vegan Steaks! How are our steaks vegan? We taught our cattle to only eat organic, ethically sourced, vegan foods. It took many years of training and genetic modifications using CRISPR to reach this point, and now we are willing to sell you the delicious results!', 'content-text');
 
   const homeContent = component('div', '', 'home-content');
+  const doorDash = component('button', 'order on DoorDash', 'door-button')
   
   homeContent.appendChild(contentTitle);
   homeContent.appendChild(contentText);
+  homeContent.appendChild(doorDash);
   homeContent.appendChild(mySteak);
   const mySteak2 = mySteak.cloneNode(true);
   homeContent.appendChild(mySteak2);

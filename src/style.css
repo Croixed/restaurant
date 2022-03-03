@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 * {
   padding: 0;
   margin: 0;
-  font-weight: bold;
   font-family: 'Open Sans';
 }
 
@@ -57,13 +60,18 @@ body {
 }
 
 .restaurant {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
+  font-family: 'Lobster';
 }
 
 .links {
   margin-left: auto;
   display: flex;
   gap: 16px;
+}
+.links>* {
+  font-family: "League Gothic";
+  font-size: 2.4rem;
 }
 
 .main-content {
@@ -86,8 +94,18 @@ body {
   border-top: 8px solid rgb(9, 18, 24);
 }
 
+.door-button {
+  background-color: red;
+  color: white;
+  padding: 0 10px;
+  font-size: 1rem;
+  height: 40px;
+  border-radius: 19px;
+}
+
 .content-title {
   font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .content-text {
@@ -95,8 +113,8 @@ body {
 }
 
 img {
-  width: 100%;
-  padding: 0px;
+  width: calc(100% - 80px);
+  padding: 0 40px;
   margin: 0px;
   border-radius: 10px;
 }
@@ -105,7 +123,7 @@ img {
   color: cyan;
   margin-top: 20px;
 
-  height: 30px;
+  padding: 4px;
   text-align: center;
   background-color: #171717c9;
 }
@@ -114,6 +132,15 @@ img {
 @media only screen and (max-width: 600px) {
   .header {
     flex-wrap: wrap;
-    height: 80px;
+    height: 110px;
+  }
+
+  .main-content {
+    margin-top: 140px;
+  }
+
+  img {
+    width: 100%;
+    padding: 0;
   }
 }

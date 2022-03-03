@@ -41,7 +41,7 @@ header.append(restaurant, links);
 // generate content from home.js
 let mainContent = homeGen();
 // generate footer
-const footer = component('div', 'footer', 'footer');
+const footer = component('div', 'Developed with ♥ by croixed', 'footer');
 
 contents.append(header, mainContent, footer);
 
