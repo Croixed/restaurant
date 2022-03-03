@@ -26,8 +26,11 @@ export const menuGen = () => {
   const menuThree = menuOne.cloneNode(true);
   const menufour = menuOne.cloneNode(true);
 
-  menuOne.appendChild(mySteak2);
-  menuTwo.appendChild(mySteak);
+  const menuTextOne = component('div', 'Item 1... ... 189.99', 'menu-text');
+  const menuTextTwo = component('div', 'Item 2... ... 189.99', 'menu-text');
+
+  menuOne.append(menuTextOne, mySteak2);
+  menuTwo.append(menuTextTwo, mySteak);
 
 
   const mainContent = component('div', '', 'main-content');
