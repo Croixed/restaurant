@@ -12,6 +12,27 @@ function component(type, text, className) {
   return element
 }
 
+//name ... ... price
+//.. description ..
+// ... image ...
+menuGenerator = (image, price, name, desc) => {
+  const MenuItem = component('div', '', 'menu-item');
+
+  const itemName = component('span', name, 'item-name');
+  const itemPrice = component('span', price, 'item-price');
+  const itemDesc = component('div', desc, 'item-desc');
+  const itemText = component('div', '', 'item-text');
+  itemText.append(itemName, itemPrice, itemDesc);
+
+  const myImage = new Image();
+  myImage.src = image;
+  myImage.classList.add("menu-img");
+
+  MenuItem.append(itemText, myImage);
+  return MenuItem;
+}
+
+
 // this is really messy and I can definitely refactor it to stay DRY
 export const menuGen = () => {
   const mySteak = new Image();
