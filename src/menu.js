@@ -36,12 +36,12 @@ const menuGenerator = (image, price, name, desc) => {
 // this is really messy and I can definitely refactor it to stay DRY
 export const menuGen = () => {
 
-  const menuOne = menuGenerator(Steak, '29.99', 'grass-fed steak', 'description goes here');
-  const menuTwo = menuGenerator(SteakTwo, '49.99', 'hay-fed steak', 'description goes here');
+  const menuOne = menuGenerator(Steak, '29.99', 'grass-fed steak', 'description goes here words words words words words');
+  const menuTwo = menuGenerator(SteakTwo, '49.99', 'hay-fed steak', 'description goes here words words words words words');
 
   const mainContent = component('div', '', 'main-content', 'grass-fed steak');
   const contentTitle = component('div', 'Menu ', 'content-title');
-  const contentText = component('div', 'Vegetarian Steaks:', 'content-text');
+  const contentText = component('div', 'Vegan Steaks:', 'content-text');
   const menuContent = component('div', '', 'menu-content');
 
   const menuWrapper = component ('div', '', 'menu-wrapper');
