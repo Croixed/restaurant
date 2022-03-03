@@ -12,8 +12,8 @@ function component(type, text, className) {
 export const menuGen = () => {
 
   const mainContent = component('div', '', 'main-content');
-  const contentTitle = component('div', 'Menu', 'content-title')
-  const contentText = component('div', 'try', 'content-text');
+  const contentTitle = component('div', 'Menu ', 'content-title')
+  const contentText = component('div', '(coming soon)', 'content-text');
 
   const menuContent = component('div', '', 'menu-content');
   

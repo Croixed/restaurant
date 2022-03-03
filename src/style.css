@@ -109,6 +109,13 @@ img[src$=".svg"] {
 .content-title {
   font-size: 2.5rem;
   font-weight: bold;
+  
+}
+
+.title-span {
+  font-size: 1.1em;
+  font-weight: normal;
+  font-family: "Lobster";
 }
 
 .content-text {
@@ -140,8 +147,13 @@ img[src$=".svg"] {
     margin-top: 140px;
   }
 
+  .content-title{
+    line-height: 95%;
+    padding-bottom: 10px;
+  }
+
   .content-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   img[src$=".svg"] {

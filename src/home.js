@@ -25,7 +25,10 @@ export const homeGen = () => {
   myDash.src = Dash;
 
   const mainContent = component('div', '', 'main-content');
-  const contentTitle = component('div', 'Welcome to Vegan Steaks', 'content-title')
+  const contentTitle = component('div', 'Welcome to ', 'content-title')
+  const titleSpan = component('span', 'Vegan Steaks', 'title-span')
+  contentTitle.appendChild(titleSpan)
+
   const contentText = component('div', 'Home of the only Vegan Steaks! How are our steaks vegan? We taught our cattle to only eat organic, ethically sourced, vegan foods. It took many years of training and genetic modifications using CRISPR to reach this point, and now we are willing to sell you the results!', 'content-text');
   const homeContent = component('div', '', 'home-content');
   

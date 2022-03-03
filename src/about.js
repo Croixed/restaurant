@@ -13,7 +13,7 @@ export const aboutGen = () => {
 
   const mainContent = component('div', '', 'main-content');
   const contentTitle = component('div', 'About Us', 'content-title')
-  const contentText = component('div', 'Ethically sourced', 'content-text');
+  const contentText = component('div', 'Ethics: (coming soon)', 'content-text');
 
   const aboutContent = component('div', '', 'about-content');
   
