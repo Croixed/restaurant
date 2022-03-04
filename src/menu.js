@@ -36,18 +36,24 @@ const menuGenerator = (image, price, name, desc) => {
 // this is really messy and I can definitely refactor it to stay DRY
 export const menuGen = () => {
 
-  const menuOne = menuGenerator(Steak, '29.99', 'grass-fed steak', 'description goes here words words words words words');
+  const menuOne = menuGenerator(Steak, '39.99', 'grass-fed steak', 'description goes here words words words words words');
   const menuTwo = menuGenerator(SteakTwo, '49.99', 'hay-fed steak', 'description goes here words words words words words');
+  const menuThree = menuGenerator(SteakTwo, '79.99', 'chicken-fed steak', 'description goes here words words words words words');
+  const menuFour = menuGenerator(Steak, '149.99', 'pork-fed steak', 'description goes here words words words words words');
+
 
   const mainContent = component('div', '', 'main-content', 'grass-fed steak');
   const contentTitle = component('div', 'Menu ', 'content-title');
   const contentText = component('div', 'Vegan Steaks:', 'content-text');
   const menuContent = component('div', '', 'menu-content');
 
-  const menuWrapper = component ('div', '', 'menu-wrapper');
+  const menuWrapper = component('div', '', 'menu-wrapper');
   menuWrapper.append(menuOne, menuTwo);
+
+  const menuWrapper2 = component('div', '', 'menu-wrapper');
+  menuWrapper2.append(menuThree, menuFour);
   
-  menuContent.append(contentTitle, contentText, menuWrapper);
+  menuContent.append(contentTitle, contentText, menuWrapper, menuWrapper2);
   mainContent.appendChild(menuContent);
   return mainContent
 }
