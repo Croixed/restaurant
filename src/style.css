@@ -173,7 +173,7 @@ img[src$=".svg"] {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .header {
     flex-wrap: wrap;
     height: 110px;
@@ -204,15 +204,15 @@ img[src$=".svg"] {
   }
 
   .menu-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
   }
 
   .item-text {
-    min-width: 230px;
+    min-width: 200px;
   }
 
   .menu-img {
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
   }
 }
