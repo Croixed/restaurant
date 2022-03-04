@@ -18,7 +18,7 @@ export const aboutGen = () => {
   myImage.classList.add("about-img");
 
   const mainContent = component('div', '', 'main-content');
-  const contentTitle = component('div', 'About Us', 'content-title')
+  const contentTitle = component('div', 'We Deliver on Amazon', 'content-title')
   const contentText = component('div', 'Don\'t live nearby? Order our Vegan Meats in the mail!', 'content-text');
 
   const aboutContent = component('div', '', 'about-content');
