@@ -203,10 +203,16 @@ img[src$=".svg"] {
     outline: 3px solid rgba(9, 18, 24, 0.33);
   }
 
-
+  .menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .menu-item {
-  }
+    width: 240px;
+  } 
 
   .menu-img {
     width: 240px;
